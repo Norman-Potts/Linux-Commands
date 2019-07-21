@@ -1,0 +1,28 @@
+Achrive management: Backing up or copying entire file systems.
+Partitions and file systems, text streams.
+tar, dd, redirects, rsync, locate, split, chmod, chown.
+
+
+What argument tells tar to compress an archive?
+tar -a
+
+
+Create a compressed archive of all the .mp4 files in a directory.
+tar czvf archivename.tar.gz *.mp4
+
+
+
+what tool will help you put multiple file parts back together?
+cat
+
+
+Find all .mp4 files within the specified directories and add them to a tar archive.
+find /var/www/ -iname "*.mp4" -exec tar -rvf videos.tar {} \;
+
+
+
+Copy an image called sdadisk.img to the /dev/sdb drive
+dd if=sdadisk.img of=/dev/sdb
+
+
+
