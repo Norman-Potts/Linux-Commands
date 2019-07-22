@@ -1,28 +1,270 @@
-Achrive management: Backing up or copying entire file systems.
-Partitions and file systems, text streams.
-tar, dd, redirects, rsync, locate, split, chmod, chown.
+/** Linux Commands
+ *  Commands have used, with a written explination. 
+ *  Document format it 2 spaces then command then explination of that command followed by two spaces.
+ * 
+ *
+ *Command
+ *Explination 
+ *
+ *
+ */
 
 
-What argument tells tar to compress an archive?
 tar -a
+Compress an archive
 
 
-Create a compressed archive of all the .mp4 files in a directory.
 tar czvf archivename.tar.gz *.mp4
+Create a compressed archive of all the .mp4 files in a directory.
 
 
-
-what tool will help you put multiple file parts back together?
-cat
-
-
-Find all .mp4 files within the specified directories and add them to a tar archive.
 find /var/www/ -iname "*.mp4" -exec tar -rvf videos.tar {} \;
+Find all .mp4 files within the specified directories and add them to a tar archive.
 
 
-
-Copy an image called sdadisk.img to the /dev/sdb drive
 dd if=sdadisk.img of=/dev/sdb
+Copy an image called sdadisk.img to the /dev/sdb drive
 
+
+nmcli d
+Provide a quick list of ethernet card installed on machine.
+
+
+nmtui
+Opens the network manager.
+
+
+ping 8.8.8.8
+Sends ping to the local connection at 8.8.8.8
+
+
+service network restart
+Restarts network services
+
+
+ip addr
+Display info about all network interfaces.
+
+
+cd /
+Change directory to root directory.
+
+
+cd ~
+Change directory to user's directory.
+
+
+cd /ham/bacon
+Change to /ham/bacon.
+
+
+man 
+The Help manual.
+
+
+ip r
+Use the system's name resolver to print DNS names instead of host address.
+
+
+ip 
+Show / Manipulate routing devices, policy routing and tunnels.
+
+
+cat
+Reads data from files and outputs their contents.
+
+
+head
+Displays the first 10 lines of a file.
+
+
+tail
+Displays the last 10 lines of a file.
+
+
+find
+Searches for files and directories in a file system.
+
+
+grep
+Processes text line by line and prints any lines which match a specified pattern.
+
+
+ls -d
+List directory entries instead of contents,  and do not dereference symbolic links.
+
+
+ls -l
+Use long format which is directory or file, permissions, owner, group, size of file, time when last modified, name of file.
+
+
+ls
+List directory items.
+
+ls -lh
+List directory items with long listing format and print file size in human readable format.
+
+cd -
+Changes directory back.
+
+
+cd ../
+Changes directory up one.
+
+
+cd ~
+Changes to the user's home directory.
+
+
+cp
+The copy command.
+
+
+man 
+The manual command.
+
+
+sleep 32
+Puts the bash to sleep for 32 seconds.
+
+
+date +%Y.%M.%d
+Displays the date... 
+
+
+head -2
+Shows first two lines.
+
+
+tail -1
+Shows last line.
+
+
+ls -l dogs
+Shows long list format just for dogs
+
+
+file
+Determines file type.
+
+
+ls -F
+Append file indicator to entries.
+
+
+find -type f -name ".txt"
+Finds files with name ending with .txt
+
+
+find -type -f -name -user "Bob"
+Find files with user that has name bob.
+
+
+find / -type -f -name "*.txt"
+Finds any file with names ending with .txt
+
+
+find / -type -f -name "*.txt" 2> /dev
+Finds files with names ending with .txt and ignore /dev
+
+
+find .
+finds everything
+
+
+find . /home/bob /home/stacy
+Find items in bob or stacy.
+
+
+find /usr/bin /home/jeff  -name "*.zip"
+Find names ending with zip in bin or jeff
+
+
+find /home/jeff | grep 'apple'
+Find then pip to grep apple.
+
+
+find . -name 'apple'
+Find items named apple.
+
+
+find . Iname 'apple'
+Find items named apple and dont worry about case.
+
+
+find .name 'apple' -type d
+Find directories named apple.
+
+
+find . -group dev
+Find things with group dev
+
+
+find . -L
+Find and continue threw symbolic links.
+
+
+find . -perm 754
+Find things with permission 754.
+
+
+find . -perm u=rwx, g=rx, o=r
+Fund items with permission u=rwz, g=rx, o=r
+
+
+find . -user jeff
+Find items with user jeff
+
+
+find . -size +16 -exec mv 'mv' '{}' ~/bin\;
+Find items bigger than 16 and execute mv to bin.
+
+
+who
+Show who is logged on.
+
+
+passwd
+Allows you to change password.
+
+
+echo 'hello world'
+Says hello world in the console.
+
+
+ls Rom<tab> 
+The tab button does auto complete.
+
+
+ln
+Makes a link between files
+
+
+ln -s
+Makes a softlink.
+
+
+chmod
+Changes the permissions
+
+
+chgrp
+Changes the group ownership of a file or files.
+
+
+newgrp
+Creates a new group
+
+
+id
+Prints the real and effective IDs of users and groups.
+
+
+su
+Changes the current user to superuser or a different specified user.
+
+
+stat
+Display file or file system status.
 
 
